@@ -1,0 +1,17 @@
+{
+  "name": "@mortein/worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/worker.ts",
+    "start": "bun src/worker.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@mortein/database": "workspace:*",
+    "@mortein/integrations": "workspace:*",
+    "@mortein/workflow-domain": "workspace:*",
+    "drizzle-orm": "^0.44.7",
+    "pg-boss": "^12.12.0"
+  }
+}

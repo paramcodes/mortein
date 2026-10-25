@@ -1,0 +1,18 @@
+{
+  "name": "@mortein/database",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./client": "./src/client.ts",
+    "./schema": "./src/schema.ts",
+    "./repository": "./src/repository.ts"
+  },
+  "scripts": {
+    "migrate": "bun src/migrate.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.44.7",
+    "postgres": "^3.4.7"
+  }
+}

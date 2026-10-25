@@ -1,0 +1,25 @@
+{
+  "name": "mortein",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "bun --env-file=../../.env run --cwd apps/web dev",
+    "dev:api": "bun --env-file=../../.env run --cwd apps/api dev",
+    "dev:worker": "bun --env-file=../../.env run --cwd apps/worker dev",
+    "db:migrate": "bun --env-file=../../.env run --cwd packages/database migrate",
+    "test": "bun test",
+    "check": "bun run lint && bun run typecheck",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "bun --filter '*' typecheck",
+    "build": "bun --filter '*' build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.2",
+    "@types/bun": "^1.2.19",
+    "typescript": "^5.9.3"
+  }
+}

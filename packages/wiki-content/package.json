@@ -1,0 +1,8 @@
+{
+  "name": "@mortein/wiki-content",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./pages": "./src/pages.ts"
+  }
+}
